@@ -2,6 +2,7 @@ footer {
   padding: 4rem 1rem 2rem 1rem;
   background-color: $black;
   color: $white;
+  font-size: 0.9rem;
 
   @include breakpoint(medium) {
     padding: 4rem 2rem 2rem 2rem;
@@ -11,9 +12,17 @@ footer {
     padding: 4rem 4rem 2rem 4rem;
   }
 
+  nav {
+    a {
+      color: $light-gray;
+      font-family: $font-sans;
+    }
+  }
+
   .footer-txt {
     margin-bottom: 1rem;
     border-bottom: 1px solid $dark-gray;
+    padding-bottom: 1rem;
 
     @include breakpoint(large) {
       border-bottom: none;
@@ -22,12 +31,41 @@ footer {
 
   .footer-menu,
   .footer-copyright {
-    font-family: sans-serif;
-    font-size: 0.8rem;
+    font-family: $font-sans;
+  }
+
+  .footer-menu {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint(large) {
+      margin-top: 0;
+    }
+
+    .menu li a {
+      padding-left: 0;
+    }
+  }
+
+  .footer-menu-policies {
+    margin-right: auto;
+    margin-left: auto;
+
+    @include breakpoint(medium) {
+      float: right;
+      text-align: right;
+    }
   }
 
   .footer-copyright {
+    margin-top: 1rem;
     border-top: 1px solid $dark-gray;
     padding-top: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
   }
 }

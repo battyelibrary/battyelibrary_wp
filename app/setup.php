@@ -56,7 +56,11 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_navigation-about' => __('Footer Nav - About', 'sage'),
+        'footer_navigation-reading' => __('Footer Nav - Further Reading', 'sage'),
+        'footer_navigation-contributors' => __('Footer Nav - Contributors', 'sage'),
+        'footer_navigation-policies' => __('Footer Nav - Policies', 'sage')
     ]);
 
     /**
