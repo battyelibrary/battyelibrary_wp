@@ -1,0 +1,39 @@
+.banner {
+  border-bottom: 1px solid $light-gray;
+  padding: 1rem;
+
+  @include breakpoint(medium) {
+    padding: 1rem 2rem;
+  }
+
+  @include breakpoint(large) {
+    padding: 1rem 4rem;
+  }
+
+  .container {
+    max-width: 1440px;
+  }
+}
+
+.banner .nav {
+  @extend .menu;
+}
+
+.nav-primary {
+  ul {
+    font-family: $font-sans;
+    font-size: 0.8rem;
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+
+    a {
+      color: $black;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $primary;
+      }
+    }
+  }
+}

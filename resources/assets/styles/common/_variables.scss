@@ -1,0 +1,40 @@
+/** Colors */
+$foundation-palette: (
+  primary: #8d2020,
+  secondary: #1866ff,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);
+
+$primary: #8d2020;
+$black: #1f1f1f;
+
+// ** Typography ** //
+$global-weight-normal: 300;
+$global-weight-bold: 500;
+$font-serif: "Martel", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-sans: "Montserrat", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+
+$body-font-family: $font-serif;
+
+$header-font-weight: 700;
+
+$header-styles: (
+  small: (
+    h1: ("font-size": 24),
+    h2: ("font-size": 18),
+    h3: ("font-size": 16),
+    h4: ("font-size": 15),
+    h5: ("font-size": 14),
+    h6: ("font-size": 13),
+  ),
+  medium: (
+    h1: ("font-size": 28),
+    h2: ("font-size": 22),
+    h3: ("font-size": 20),
+    h4: ("font-size": 19),
+    h5: ("font-size": 18),
+    h6: ("font-size": 13),
+  ),
+);

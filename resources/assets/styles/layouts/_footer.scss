@@ -1,0 +1,33 @@
+footer {
+  padding: 4rem 1rem 2rem 1rem;
+  background-color: $black;
+  color: $white;
+
+  @include breakpoint(medium) {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+
+  @include breakpoint(large) {
+    padding: 4rem 4rem 2rem 4rem;
+  }
+
+  .footer-txt {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $dark-gray;
+
+    @include breakpoint(large) {
+      border-bottom: none;
+    }
+  }
+
+  .footer-menu,
+  .footer-copyright {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+  }
+
+  .footer-copyright {
+    border-top: 1px solid $dark-gray;
+    padding-top: 1rem;
+  }
+}
