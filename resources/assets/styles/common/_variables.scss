@@ -1,4 +1,5 @@
-/** Colors */
+// Colour
+//--------------------
 $foundation-palette: (
   primary: #8d2020,
   secondary: #1866ff,
@@ -8,9 +9,12 @@ $foundation-palette: (
 );
 
 $primary: #8d2020;
+$white: #fefefe;
 $black: #1f1f1f;
+$light-gray: #e6e6e6;
 
-// ** Typography ** //
+// Typography
+//--------------------
 $global-weight-normal: 300;
 $global-weight-bold: 500;
 $font-serif: "Martel", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -38,3 +42,15 @@ $header-styles: (
     h6: ("font-size": 13),
   ),
 );
+
+// Buttons
+//--------------------
+$button-font-family: $font-sans;
+$button-background: $white;
+$button-background-hover: $light-gray;
+$button-color: $black;
+$button-radius: 2px;
+
+// Forms
+//--------------------
+$input-border: 1px solid $light-gray;

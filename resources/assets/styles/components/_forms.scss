@@ -9,9 +9,15 @@
 
 .search-form .search-field {
   @extend .input-group-field;
+
+  height: 2.5rem;
 }
 
 .search-form .search-submit {
   @extend .button;
-  @extend .secondary;
+
+  border: 1px solid $light-gray;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+  text-transform: uppercase;
 }

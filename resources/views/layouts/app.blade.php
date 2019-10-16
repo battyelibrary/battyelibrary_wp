@@ -9,11 +9,9 @@
         <main class="main cell small-12 large-9">
           @yield('content')
         </main>
-        @if (App\display_sidebar())
-          <aside class="sidebar cell small-12 large-3">
-            @include('partials.sidebar')
-          </aside>
-        @endif
+        <aside class="sidebar cell small-12 large-3">
+          @include('partials.sidebar')
+        </aside>
       </div>
     </div>
     @php do_action('get_footer') @endphp
