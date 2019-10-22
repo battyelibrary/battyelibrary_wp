@@ -34,15 +34,15 @@
 
     <div class="footer-copyright cell small-12">
       <div class="grid-x">
-        <div class="cell small-12 medium-6">
+        <div class="cell small-12 large-6">
           <p>© <?php echo date("Y"); ?> Friends of Battye Library Inc.</p>
         </div>
 
         <!-- Policies Menu -->
-        <div class="cell small-12 medium-6 float-right">
+        <div class="cell small-12 large-6 float-right">
           <nav class="footer-menu-policies">
             @if (has_nav_menu('footer_navigation-policies'))
-              {!! wp_nav_menu(['theme_location' => 'footer_navigation-policies', 'menu_class' => 'menu']) !!}
+              {!! wp_nav_menu(['theme_location' => 'footer_navigation-policies', 'menu_class' => 'menu align-center']) !!}
             @endif
           </nav>
         </div>

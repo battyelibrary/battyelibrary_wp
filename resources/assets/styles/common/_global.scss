@@ -1,6 +1,12 @@
+a {
+  transition: 0.3s;
+}
+
 .wrap {
   max-width: 1440px;
   padding: 4rem 1rem 2rem 1rem;
+  margin-right: auto;
+  margin-left: auto;
 
   @include breakpoint(medium) {
     padding: 4rem 2rem 2rem 2rem;

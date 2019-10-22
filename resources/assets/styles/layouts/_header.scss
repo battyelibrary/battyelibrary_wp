@@ -1,4 +1,5 @@
 .banner {
+  height: auto;
   border-bottom: 1px solid $light-gray;
   padding: 1rem;
 
@@ -11,7 +12,9 @@
   }
 
   .container {
-    max-width: 1440px;
+    max-width: 1315px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -36,4 +39,26 @@
       }
     }
   }
+}
+
+.no-js {
+  @include breakpoint(medium down) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(large) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
+
+[data-sticky] {
+  width: 100%;
+}
+
+.sticky-container {
+  z-index: 5;
 }

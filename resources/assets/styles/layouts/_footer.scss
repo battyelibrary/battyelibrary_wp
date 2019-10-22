@@ -1,21 +1,27 @@
 footer {
-  padding: 4rem 1rem 2rem 1rem;
+  padding: 4rem 1rem 1rem 1rem;
   background-color: $black;
   color: $white;
   font-size: 0.9rem;
 
   @include breakpoint(medium) {
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 1rem 2rem;
   }
 
   @include breakpoint(large) {
-    padding: 4rem 4rem 2rem 4rem;
+    padding: 4rem 4rem 1rem 4rem;
   }
 
   nav {
     a {
       color: $light-gray;
       font-family: $font-sans;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-gray;
+      }
     }
   }
 
@@ -51,9 +57,13 @@ footer {
     margin-right: auto;
     margin-left: auto;
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       float: right;
       text-align: right;
+    }
+
+    .menu li a {
+      padding-top: 0.3rem;
     }
   }
 
@@ -64,8 +74,14 @@ footer {
     font-size: 0.8rem;
     text-align: center;
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       text-align: left;
     }
   }
+}
+
+footer .container {
+  max-width: 1315px;
+  margin-right: auto;
+  margin-left: auto;
 }
