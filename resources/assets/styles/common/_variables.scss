@@ -12,6 +12,8 @@ $primary: #8d2020;
 $white: #fefefe;
 $black: #1f1f1f;
 $light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #808080;
 
 // Typography
 //--------------------
@@ -29,16 +31,16 @@ $header-styles: (
     h1: ("font-size": 24),
     h2: ("font-size": 18),
     h3: ("font-size": 16),
-    h4: ("font-size": 15),
-    h5: ("font-size": 14),
-    h6: ("font-size": 13),
+    h4: ("font-size": 12),
+    h5: ("font-size": 11),
+    h6: ("font-size": 10),
   ),
   medium: (
     h1: ("font-size": 28),
     h2: ("font-size": 22),
     h3: ("font-size": 20),
-    h4: ("font-size": 19),
-    h5: ("font-size": 18),
+    h4: ("font-size": 15),
+    h5: ("font-size": 14),
     h6: ("font-size": 13),
   ),
 );

@@ -2,30 +2,47 @@ a {
   transition: 0.3s;
 }
 
+h4 {
+  font-family: $font-sans;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $dark-gray;
+}
+
+hr {
+  &.is-style-wide {
+    border-color: $medium-gray;
+  }
+
+  .wp-block-separator.is-style-dots::before {
+    color: $medium-gray;
+  }
+}
+
 .wrap {
   max-width: 1440px;
-  padding: 4rem 1rem 2rem 1rem;
+  padding: 3rem 1rem 2rem 1rem;
   margin-right: auto;
   margin-left: auto;
 
   @include breakpoint(medium) {
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
   }
 
   @include breakpoint(large) {
-    padding: 4rem 4rem 2rem 4rem;
+    padding: 3rem 4rem 2rem 4rem;
   }
 }
 
 .main {
   @include breakpoint(large) {
-    border-right: 1px solid $light-gray;
+    border-right: 1px solid $medium-gray;
     padding-right: 2rem;
   }
 }
 
 .sidebar {
-  border-top: 1px solid $light-gray;
+  border-top: 1px solid $medium-gray;
   padding-top: 1rem;
 
   @include breakpoint(large) {
