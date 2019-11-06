@@ -1,3 +1,11 @@
+@extends('layouts.app')
+
+@section('content')
+  @while(have_posts()) @php the_post() @endphp
+    @php the_content() @endphp
+  @endwhile
+@endsection
+
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
@@ -6,9 +14,26 @@
     @include('partials.header')
     <div class="wrap container" role="document">
       <div class="content grid-x">
+        <!-- Intro -->
+        <section class="homeintro grid-x">
+          <div class="cell small-12 large-9">
+            @while(have_posts()) @php the_post() @endphp
+              @php the_content() @endphp
+            @endwhile          
+          </div>
+        </section>
+
         <!-- Main Content -->
         <main class="main cell small-12 large-9">
-          @yield('content')
+          <section>
+            Events
+          </section>
+          <section>
+            Articles
+          </section>
+          <section>
+            Further reading
+          </section>
         </main>
 
         <!-- Sidebar -->
