@@ -5,7 +5,7 @@ a {
 
 h4 {
   font-family: $font-sans;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   color: $dark-gray;
 }
@@ -18,6 +18,13 @@ hr {
   .wp-block-separator.is-style-dots::before {
     color: $medium-gray;
   }
+}
+
+.readmore {
+  font-family: $font-sans;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .wrap {
@@ -53,6 +60,14 @@ hr {
   }
 }
 
+.content-section {
+  + .content-section {
+    margin-top: 1rem;
+    border-top: 1px solid $medium-gray;
+    padding-top: 1rem;
+  }
+}
+
 .noresults.alert {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -63,16 +78,18 @@ hr {
 }
 
 // Front Page
-.homeintro {
+.index-main {
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.home-intro {
   margin-bottom: 2rem;
   border-bottom: 1px solid $medium-gray;
   padding-right: none;
   padding-left: none;
   padding-bottom: 2rem;
-
-  @include breakpoint(large) {
-    padding-bottom: 0.5rem;
-  }
 
   .intro-txt {
     @include breakpoint(large) {
@@ -85,5 +102,16 @@ hr {
     @include breakpoint(large) {
       padding-left: 2rem;
     }
+  }
+}
+
+.home-articles {
+  article + article {
+    border-left: 1px solid $light-gray;
+    padding-left: 1rem;
+  }
+
+  article:first-of-type {
+    padding-right: 1rem;
   }
 }
