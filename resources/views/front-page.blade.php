@@ -16,28 +16,31 @@
       <div class="content grid-x">
         <!-- Intro -->
         <section class="homeintro grid-x">
-          <div class="cell small-12 large-9">
+          <div class="intro-txt cell small-12 large-8">
             @while(have_posts()) @php the_post() @endphp
               @php the_content() @endphp
             @endwhile          
           </div>
+          <div class="intro-img cell small-12 large-4">
+            Intro image goes here
+          </div>
         </section>
 
         <!-- Main Content -->
-        <main class="main cell small-12 large-9">
+        <main class="main cell small-12 large-8">
           <section>
-            Events
+            Events go here
           </section>
           <section>
-            Articles
+            Articles go here
           </section>
           <section>
-            Further reading
+            Further reading goes here
           </section>
         </main>
 
         <!-- Sidebar -->
-        <aside class="sidebar cell small-12 large-3">
+        <aside class="sidebar cell small-12 large-4">
           @include('partials.sidebar')
         </aside>
       </div>

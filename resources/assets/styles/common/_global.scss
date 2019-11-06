@@ -1,3 +1,4 @@
+// Global
 a {
   transition: 0.3s;
 }
@@ -59,4 +60,30 @@ hr {
 
 .noresults-search label {
   width: 100%;
+}
+
+// Front Page
+.homeintro {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $medium-gray;
+  padding-right: none;
+  padding-left: none;
+  padding-bottom: 2rem;
+
+  @include breakpoint(large) {
+    padding-bottom: 0.5rem;
+  }
+
+  .intro-txt {
+    @include breakpoint(large) {
+      border-right: 1px solid $light-gray;
+      padding-right: 2rem;
+    }
+  }
+
+  .intro-img {
+    @include breakpoint(large) {
+      padding-left: 2rem;
+    }
+  }
 }

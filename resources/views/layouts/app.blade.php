@@ -7,12 +7,12 @@
     <div class="wrap container" role="document">
       <div class="content grid-x">
         <!-- Main Content -->
-        <main class="main cell small-12 large-9">
+        <main class="main cell small-12 large-8">
           @yield('content')
         </main>
 
         <!-- Sidebar -->
-        <aside class="sidebar cell small-12 large-3">
+        <aside class="sidebar cell small-12 large-4">
           @include('partials.sidebar')
         </aside>
       </div>
