@@ -4,10 +4,12 @@
   @include('partials.category-header')
 
   @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
+    <div class="noresults alert alert-warning">
+      {{ __('Sorry, no results were found. Try searching for what you are looking for below.', 'sage') }}
     </div>
-    {!! get_search_form(false) !!}
+    <div class="noresults-search">
+      {!! get_search_form(false) !!}
+    </div>
   @endif
 
   @while (have_posts()) @php the_post() @endphp

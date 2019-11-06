@@ -1,6 +1,7 @@
 <article @php post_class() @endphp>
   <header class="single-header">
     <!-- Featured Image -->
+    <!-- This needs to be changed to display only if the featured image exists  -->
     <div class="entry-image">
       @php the_post_thumbnail() @endphp
     </div>
@@ -10,7 +11,7 @@
   </header>
   <!-- Content -->
   <div class="entry-excerpt">
-    <p>Article excerpt goes here.</p>
+    @php the_excerpt() @endphp
   </div>
   <div class="entry-content">
     @php the_content() @endphp

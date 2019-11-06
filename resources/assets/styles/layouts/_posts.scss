@@ -1,0 +1,27 @@
+.post {
+  margin-bottom: 2rem;
+
+  + .post {
+    border-top: 1px solid $medium-gray;
+    padding-top: 2.5rem;
+  }
+
+  .updated,
+  .byline {
+    color: $dark-gray;
+
+    a {
+      color: $dark-gray;
+      text-decoration: underline;
+    }
+  }
+
+  .entry-title a {
+    color: $black;
+  }
+
+  .entry-summary {
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+}
