@@ -5,7 +5,7 @@ a {
 
 h4 {
   font-family: $font-sans;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   color: $dark-gray;
 }
@@ -23,7 +23,7 @@ hr {
 .readmore {
   font-family: $font-sans;
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -61,10 +61,12 @@ hr {
 }
 
 .content-section {
+  padding-top: 1rem;
+
   + .content-section {
     margin-top: 1rem;
     border-top: 1px solid $medium-gray;
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
 }
 
@@ -105,13 +107,79 @@ hr {
   }
 }
 
-.home-articles {
+// Front Page: Projects
+.home-projects {
+  h3 a {
+    color: $black;
+  }
+
   article + article {
-    border-left: 1px solid $light-gray;
-    padding-left: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid $light-gray;
+    padding-top: 1rem;
+  }
+}
+
+// Front Page: Articles
+.home-articles {
+  h3 a {
+    color: $black;
+  }
+
+  article + article {
+    border-top: 1px solid $light-gray;
+    padding-top: 1rem;
+
+    @include breakpoint(large) {
+      border-left: 1px solid $light-gray;
+      border-top: none;
+      padding-left: 1rem;
+      padding-top: 0;
+    }
   }
 
   article:first-of-type {
-    padding-right: 1rem;
+    padding-bottom: 1rem;
+
+    @include breakpoint(large) {
+      padding-bottom: 0;
+      padding-right: 1rem;
+    }
+  }
+}
+
+// Front Page: Readings
+.home-readings {
+  h3 a {
+    color: $black;
+  }
+
+  .home-dictionary {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 1rem;
+  }
+
+  .home-bibliography,
+  .home-links {
+    padding-bottom: 1rem;
+  }
+
+  .home-bibliography {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $light-gray;
+
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+      border-right: 1px solid $light-gray;
+      border-bottom: none;
+      padding-right: 1rem;
+    }
+  }
+
+  .home-links {
+    @include breakpoint(medium) {
+      padding-left: 1rem;
+    }
   }
 }
