@@ -3,6 +3,13 @@ a {
   transition: 0.3s;
 }
 
+.button {
+  border: 1px solid $light-gray;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 h4 {
   font-family: $font-sans;
   font-weight: 400;
@@ -67,6 +74,10 @@ hr {
     margin-top: 1rem;
     border-top: 1px solid $medium-gray;
     padding-top: 2rem;
+  }
+
+  .button {
+    margin-top: 1rem;
   }
 }
 
@@ -181,5 +192,12 @@ hr {
     @include breakpoint(medium) {
       padding-left: 1rem;
     }
+  }
+}
+
+// Front Page: Publications
+.home-publications {
+  h3 a {
+    color: $black;
   }
 }

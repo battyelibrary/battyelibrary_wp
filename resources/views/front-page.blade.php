@@ -11,7 +11,7 @@
           <div class="intro-txt cell small-12 large-8">
             @while(have_posts()) @php the_post() @endphp
               @php the_content() @endphp
-            @endwhile          
+            @endwhile     
           </div>
           <div class="intro-img cell small-12 large-4">
             Intro image goes here
@@ -23,7 +23,7 @@
           <!-- EVENTS -->
           <section class="content-section home-events">
             <h2>Upcoming Meetings & Events</h2>
-
+            <a href="#" class="button">View events for 2020</a> <!-- use php for dynamic year display -->
           </section>
 
           <!-- MEMBERSHIP (Mobile Only) -->
@@ -34,7 +34,7 @@
           <!-- ARTICLES -->
           <section class="content-section home-articles">
             <h2>Latest Articles</h2>
-              @php $catquery = new WP_Query( array( 'cat' => '2' ) ); @endphp <!-- convert to Blade syntax -->
+              @php $catquery = new WP_Query( array( 'cat' => '2', 'posts_per_page' => '2') ); @endphp
             <div class="grid-x">
               @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
                 <article class="small-12 large-6">
@@ -52,11 +52,12 @@
                 </article>
               @endwhile           
             </div>
+            <a href="#" class="button">View all articles</a>
           </section>
 
           <!-- PUBLICATIONS (Mobile Only) -->
           <section class="content-section home-publications hide-for-large">
-            <h2>Publications</h2>
+            @include('partials.home-publications')
           </section>
 
           <!-- READINGS -->
@@ -128,8 +129,8 @@
               @include('partials.home-membership')
             </div>
             <!-- Publications -->
-            <div class="content-section cell small-12">
-              <h2>Publications</h2>
+            <div class="content-section home-publications cell small-12">
+              @include('partials.home-publications')
             </div>
             <!-- Featured Projects -->
             <div class="content-section home-projects cell small-12">
