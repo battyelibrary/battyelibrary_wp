@@ -1,0 +1,14 @@
+.sidebar-posts-menu {
+  ul li {
+    padding: 0.5rem 0;
+  }
+
+  ul li a {
+    color: $black;
+    padding-left: 0;
+  }
+
+  li + li {
+    border-top: 1px solid $light-gray;
+  }
+}

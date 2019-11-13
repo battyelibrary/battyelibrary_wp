@@ -13,7 +13,12 @@
 
         <!-- Sidebar -->
         <aside class="sidebar cell small-12 large-4">
-          @include('partials.sidebar')
+          <!-- Search -->
+          <div class="content-section">
+            @include('partials.sidebar')
+            @yield('sidebar-other')
+          </div>
+          @yield('sidebar-content')
         </aside>
       </div>
     </div>

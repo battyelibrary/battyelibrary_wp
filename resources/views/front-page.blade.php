@@ -34,7 +34,7 @@
           <!-- ARTICLES -->
           <section class="content-section home-articles">
             <h2>Latest Articles</h2>
-              @php $catquery = new WP_Query( array( 'cat' => '2', 'posts_per_page' => '2') ); @endphp
+              @php $catquery = new WP_Query( array( 'category_name' => 'articles', 'posts_per_page' => '2') ); @endphp
             <div class="grid-x">
               @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
                 <article class="small-12 large-6">

@@ -1,6 +1,12 @@
 // Global
 a {
   transition: 0.3s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $primary-color;
+  }
 }
 
 .button {
