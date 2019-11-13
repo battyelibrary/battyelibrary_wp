@@ -110,6 +110,19 @@ add_action('widgets_init', function () {
         'name'          => __('Events', 'sage'),
         'id'            => 'sidebar-events'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Newsletters', 'sage'),
+        'id'            => 'sidebar-newsletters'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Articles', 'sage'),
+        'id'            => 'sidebar-articles'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Jacks Back', 'sage'),
+        'id'            => 'sidebar-jacks-back'
+    ] + $config);
+
 });
 
 /**

@@ -21,7 +21,7 @@
 
 @section('sidebar-other')
 <!-- Calendar of Events -->
-<div class="content-section">
+<div class="sidebar-events">
   <!-- Change to Google Calendar for add events capability -->
   @php dynamic_sidebar('sidebar-events') @endphp
 </div>

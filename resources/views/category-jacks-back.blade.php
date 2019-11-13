@@ -19,15 +19,20 @@
   {!! get_the_posts_navigation() !!}
 @endsection
 
-@section('sidebar-content')
-  <!-- Recent Articles -->
-  <div class="content-section sidebar-posts-menu">
-    <h2>Recent Jack's Back Articles</h2>
-    <ul class="vertical menu" data-accordion-menu>
-      @php $catquery = new WP_Query( array( 'category_name' => 'jacks-back', 'posts_per_page' => '6') ); @endphp
-      @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
-      <li class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></li>
-      @endwhile
-    </ul>
+@section('sidebar-other')
+  <div class="sidebar-jacks-back">
+    <!-- Widgets -->
+    @php dynamic_sidebar('sidebar-jacks-back') @endphp
+
+    <!-- Recent Articles -->
+    <section class="sidebar-posts-menu">
+      <h3>Recent Jack's Back Articles</h3>
+      <ul class="vertical menu" data-accordion-menu>
+        @php $catquery = new WP_Query( array( 'category_name' => 'jacks-back', 'posts_per_page' => '6') ); @endphp
+        @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
+        <li class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></li>
+        @endwhile
+      </ul>
+    </section>
   </div>
 @endsection

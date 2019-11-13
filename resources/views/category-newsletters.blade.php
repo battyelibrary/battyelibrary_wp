@@ -19,27 +19,8 @@
   {!! get_the_posts_navigation() !!}
 @endsection
 
-@section('sidebar-content')
-  <!-- About Newsletters -->
-  <div class="content-section">
-    <h2>About the Newsletter</h2> <!-- Replace with ACF plugin -->
-    @php $image = get_field('sidebar-news_about'); @endphp
-  </div>
-
-  <!-- Contributions -->
-  <div class="content-section">
-    <h2>Contributions</h2> <!-- Replace with ACF plugin -->
-    @php $image = get_field('sidebar-news_contribute'); @endphp
-  </div>
-
-  <!-- Recent Newsletters -->
-  <div class="content-section sidebar-posts-menu">
-    <h2>Newsletters by Year</h2>
-    <!--<ul class="recent-posts-menu vertical menu" data-accordion-menu>
-      @php $catquery = new WP_Query( array( 'cat' => '2', 'posts_per_page' => '6') ); @endphp
-      @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
-      <li class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></li>
-      @endwhile
-    </ul>-->
+@section('sidebar-other')
+  <div class="sidebar-newsletters">
+    @php dynamic_sidebar('sidebar-newsletters') @endphp
   </div>
 @endsection
