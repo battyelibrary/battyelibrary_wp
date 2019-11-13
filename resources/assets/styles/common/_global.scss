@@ -1,12 +1,8 @@
-// Global
+// ## GLOBAL
+// Anchors & Buttons
 a {
+  color: $black;
   transition: 0.3s;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $primary-color;
-  }
 }
 
 .button {
@@ -16,6 +12,15 @@ a {
   text-transform: uppercase;
 }
 
+.readmore {
+  color: $primary-color;
+  font-family: $font-sans;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// Typography
 h4 {
   font-family: $font-sans;
   font-weight: 400;
@@ -33,13 +38,7 @@ hr {
   }
 }
 
-.readmore {
-  font-family: $font-sans;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
+// Containers
 .wrap {
   max-width: 1440px;
   padding: 3rem 1rem 2rem 1rem;
@@ -96,7 +95,8 @@ hr {
   width: 100%;
 }
 
-// Front Page
+// FRONT PAGE
+// Intro
 .index-main {
   p {
     font-size: 0.9rem;
@@ -126,10 +126,6 @@ hr {
 
 // Front Page: Projects
 .home-projects {
-  h3 a {
-    color: $black;
-  }
-
   article + article {
     margin-top: 1rem;
     border-top: 1px solid $light-gray;
@@ -139,10 +135,6 @@ hr {
 
 // Front Page: Articles
 .home-articles {
-  h3 a {
-    color: $black;
-  }
-
   article + article {
     border-top: 1px solid $light-gray;
     padding-top: 1rem;
@@ -167,10 +159,6 @@ hr {
 
 // Front Page: Readings
 .home-readings {
-  h3 a {
-    color: $black;
-  }
-
   .home-dictionary {
     margin-bottom: 2rem;
     border-bottom: 1px solid $light-gray;
@@ -198,12 +186,5 @@ hr {
     @include breakpoint(medium) {
       padding-left: 1rem;
     }
-  }
-}
-
-// Front Page: Publications
-.home-publications {
-  h3 a {
-    color: $black;
   }
 }
