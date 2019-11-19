@@ -124,37 +124,49 @@ hr {
   }
 }
 
-// Front Page: Projects
-.home-projects {
-  article + article {
-    margin-top: 1rem;
+// Front Page: Events
+.home-events {
+  table,
+  th,
+  td {
+    background-color: $white;
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
     border-top: 1px solid $light-gray;
-    padding-top: 1rem;
+    border-right: none;
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    padding: 1rem;
+  }
+
+  table {
+    border: 1px solid $medium-gray;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  .events-wrapper {
+    margin-top: 1rem;
   }
 }
 
-// Front Page: Articles
-.home-articles {
-  article + article {
-    border-top: 1px solid $light-gray;
+// Front Page: Articles, Projects, Publications
+.home-articles,
+.home-projects {
+  article {
     padding-top: 1rem;
-
-    @include breakpoint(large) {
-      border-left: 1px solid $light-gray;
-      border-top: none;
-      padding-left: 1rem;
-      padding-top: 0;
-    }
-  }
-
-  article:first-of-type {
     padding-bottom: 1rem;
-
-    @include breakpoint(large) {
-      padding-bottom: 0;
-      padding-right: 1rem;
-    }
   }
+}
+
+// Publications
+.home-publications .entry-image {
+  padding-bottom: 125%;
 }
 
 // Front Page: Readings
@@ -185,6 +197,77 @@ hr {
   .home-links {
     @include breakpoint(medium) {
       padding-left: 1rem;
+    }
+  }
+}
+
+// Literature Page
+.lit-articles,
+.lit-newsletters,
+.lit-jacks-back {
+  article {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+// Consecutive element styling
+
+// Home Page: Articles
+// Lit Page: Articles, Newsletters, Jack's Back
+.home-articles,
+.home-projects,
+.lit-articles,
+.lit-newsletters,
+.lit-jacks-back {
+  article + article {
+    border-top: 1px solid $light-gray;
+  }
+}
+
+.home-articles,
+.lit-articles,
+.lit-newsletters,
+.lit-jacks-back {
+  @include breakpoint(large) {
+    article + article {
+      border-top: none;
+      border-left: 1px solid $light-gray;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.home-publications {
+  article + article {
+    border-left: 1px solid $light-gray;
+    padding-left: 1rem;
+  }
+
+  article:first-of-type {
+    padding-right: 1rem;
+  }
+
+  @include breakpoint(large) {
+    article + article {
+      border-left: none;
+      border-top: 1px solid $light-gray;
+      padding-left: 0;
+      padding-top: 1rem;
+    }
+
+    article:first-of-type {
+      padding-right: 0;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+// First of type styling
+.home-articles {
+  @include breakpoint(large) {
+    article:first-of-type {
+      padding-right: 1rem;
     }
   }
 }

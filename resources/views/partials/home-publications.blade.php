@@ -2,7 +2,7 @@
 @php $catquery = new WP_Query( array( 'cat' => '12', 'posts_per_page' => '2' ) ); @endphp <!-- convert to Blade syntax -->
 <div class="grid-x">
   @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
-    <article class="small-12">
+    <article class="small-6 large-12">
       <!-- Featured Image -->
       <div class="entry-image">
         <a href="{{ get_permalink() }}">@php the_post_thumbnail() @endphp</a>

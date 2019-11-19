@@ -7,7 +7,7 @@
     <div class="wrap container" role="document">
       <div class="content grid-x">
         <main class="index-main main cell small-12 large-8">
-          <!-- ARTICLES -->
+          <!-- Articles -->
           <section class="content-section lit-articles">
             <h2>Latest Articles</h2>
               @php $catquery = new WP_Query( array( 'category_name' => 'articles', 'posts_per_page' => '2') ); @endphp
@@ -55,7 +55,7 @@
             <a href="#" class="button">View all newsletters</a>
           </section>
 
-          <!-- JACK'S BACK -->
+          <!-- Jack's Back -->
           <section class="content-section lit-jacks-back">
             <h2>Latest Jack's Back Articles</h2>
               @php $catquery = new WP_Query( array( 'category_name' => 'jacks-back', 'posts_per_page' => '2') ); @endphp

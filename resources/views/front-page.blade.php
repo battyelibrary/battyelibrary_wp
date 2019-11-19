@@ -23,7 +23,20 @@
           <!-- EVENTS -->
           <section class="content-section home-events">
             <h2>Upcoming Meetings & Events</h2>
-            <a href="#" class="button">View events for 2020</a> <!-- use php for dynamic year display -->
+              @php $catquery = new WP_Query( array( 'category_name' => 'events', 'posts_per_page' => '1') ); @endphp
+            <div class="events-wrapper grid-x">
+              @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
+                <article class="cell small-12 large-8">
+                  <!-- Title --> 
+                  <h3 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h3>
+                  <!-- Content -->
+                  <div class="entry-table">
+                    @php the_content() @endphp
+                  </div>
+                </article>
+              @endwhile           
+            </div>
+            <a href="./category/events" class="button">View events for 2020</a> <!-- use php for dynamic year display -->
           </section>
 
           <!-- MEMBERSHIP (Mobile Only) -->
@@ -37,7 +50,7 @@
               @php $catquery = new WP_Query( array( 'category_name' => 'articles', 'posts_per_page' => '2') ); @endphp
             <div class="grid-x">
               @while($catquery->have_posts()) @php $catquery->the_post(); @endphp
-                <article class="small-12 large-6">
+                <article class="cell small-12 large-6">
                   <!-- Featured Image -->
                   <div class="entry-image">
                     <a href="{{ get_permalink() }}">@php the_post_thumbnail() @endphp</a>
@@ -52,7 +65,7 @@
                 </article>
               @endwhile           
             </div>
-            <a href="#" class="button">View all articles</a>
+            <a href="./category/articles" class="button">View all articles</a>
           </section>
 
           <!-- PUBLICATIONS (Mobile Only) -->
@@ -65,7 +78,7 @@
             <h2>Further Reading</h2>
             <!-- Bicentennial Dictionary -->
             <div class="grid-x">
-              @php $pagequery = new WP_Query( array( 'post-type' => 'page', 'page_id' => '143' ) ); @endphp <!-- convert to Blade syntax -->
+              @php $pagequery = new WP_Query( array( 'post-type' => 'page', 'page_id' => '143' ) ); @endphp <!-- convert this to Blade syntax -->
               @while($pagequery->have_posts()) @php $pagequery->the_post(); @endphp
                 <article class="home-dictionary small-12">
                   <!-- Featured Image -->
